@@ -22,6 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyyaml
 
+      - name: List files in the repository
+        run: |
+          pwd
+          ls -R
+        # This step will print the working directory and list all files.
+
       #- name: Run Feed Generator
       - name: Execute Python script
         run: |

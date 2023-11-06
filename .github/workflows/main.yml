@@ -25,7 +25,6 @@ jobs:
       #- name: Run Feed Generator
       - name: Execute Python script
         run: |
-          cd /workspaces/PodCastTest/PodCastTest/
           python feed.py
       # This step changes the directory to where your script is and executes it.
 

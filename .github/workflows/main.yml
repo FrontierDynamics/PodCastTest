@@ -9,19 +9,25 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+      # This action checks out your repository onto the runner, allowing you to run actions against your code.
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
+        # This action sets up a Python environment for use in actions by downloading a specified version of Python and adding it to PATH.
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pyyaml
 
-      - name: Run Feed Generator
-        run: python feed.py
+      #- name: Run Feed Generator
+      - name: Execute Python script
+        run: |
+        cd /workspaces/PodCastTest/
+        python feed.py
+      # This step changes the directory to where your script is and executes it.
 
       - name: Commit changes
         run: |

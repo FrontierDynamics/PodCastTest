@@ -26,12 +26,8 @@ jobs:
         run: |
           pwd
           ls -R
-        # This step will print the working directory and list all files.
-      - name: cd then List files in the repository
-        run: |
-          cd /workspaces/PodCastTest/
-          pwd
-          ls -R
+      # This step will print the working directory and list all files.
+
       #- name: Run Feed Generator
       - name: Execute Python script
         run: |
